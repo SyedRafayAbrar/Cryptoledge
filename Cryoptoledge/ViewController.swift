@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var statsButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        rightBlur.layer
+        rightBlur.layer.cornerRadius = 5
         leftsideViewLeading.constant = -128
         rightSideViewTrailing.constant = -128
         blurVeiw.layer.cornerRadius = 5

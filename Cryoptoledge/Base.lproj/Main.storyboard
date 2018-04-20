@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,20 +15,42 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cryoptoledge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_crypto" translatesAutoresizingMaskIntoConstraints="NO" id="fym-ML-h6r">
-                                <rect key="frame" x="-2" y="0.0" width="377" height="667"/>
+                                <rect key="frame" x="-2" y="0.0" width="416" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6y-jU-bJ1">
-                                <rect key="frame" x="246" y="20" width="128" height="54"/>
+                                <rect key="frame" x="285" y="20" width="128" height="54"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y92-zw-xSO">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="54"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EGa-mh-Vw9">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="54"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-ev-epS">
+                                                    <rect key="frame" x="79" y="12" width="41" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="News">
+                                                        <color key="titleColor" red="0.026589752462747973" green="1" blue="0.24313627463110166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7T-oz-SEh">
+                                                    <rect key="frame" x="8" y="12" width="35" height="35"/>
+                                                    <state key="normal" image="icons8-automatic-50"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wCB-ev-epS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EGa-mh-Vw9" secondAttribute="leading" constant="20" symbolic="YES" id="1ex-Xd-dx4"/>
+                                                <constraint firstItem="z7T-oz-SEh" firstAttribute="top" secondItem="EGa-mh-Vw9" secondAttribute="top" constant="12" id="Nx4-iH-8Pm"/>
+                                                <constraint firstItem="z7T-oz-SEh" firstAttribute="leading" secondItem="EGa-mh-Vw9" secondAttribute="leading" constant="8" id="SQ2-ai-8ln"/>
+                                                <constraint firstAttribute="trailing" secondItem="wCB-ev-epS" secondAttribute="trailing" constant="8" id="TDM-wt-LXt"/>
+                                                <constraint firstAttribute="trailing" secondItem="z7T-oz-SEh" secondAttribute="trailing" constant="85" id="XnP-Hz-FTW"/>
+                                                <constraint firstAttribute="bottom" secondItem="z7T-oz-SEh" secondAttribute="bottom" constant="7" id="dHM-eU-HAi"/>
+                                                <constraint firstItem="wCB-ev-epS" firstAttribute="top" secondItem="EGa-mh-Vw9" secondAttribute="top" constant="12" id="lpg-ke-nPT"/>
+                                            </constraints>
                                         </view>
                                         <blurEffect style="light"/>
                                     </visualEffectView>
@@ -72,6 +94,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="uEE-pL-UHJ" firstAttribute="height" secondItem="jMh-RF-uiT" secondAttribute="height" id="5si-Ze-MpR"/>
+                                    <constraint firstItem="rk7-Kr-yoQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jMh-RF-uiT" secondAttribute="leading" constant="20" symbolic="YES" id="Abc-u3-7zX"/>
                                     <constraint firstItem="uEE-pL-UHJ" firstAttribute="width" secondItem="jMh-RF-uiT" secondAttribute="width" id="FHS-qS-8oR"/>
                                     <constraint firstAttribute="bottom" secondItem="AM7-DP-jMf" secondAttribute="bottom" constant="12" id="Fi4-kR-YHq"/>
                                     <constraint firstItem="rk7-Kr-yoQ" firstAttribute="top" secondItem="jMh-RF-uiT" secondAttribute="top" constant="12" id="HNE-dI-DB8"/>
@@ -110,11 +133,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="133.125" y="132.04225352112675"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg_crypto" width="375" height="667"/>
+        <image name="icons8-automatic-50" width="50" height="50"/>
         <image name="stats" width="24" height="24"/>
     </resources>
 </document>
