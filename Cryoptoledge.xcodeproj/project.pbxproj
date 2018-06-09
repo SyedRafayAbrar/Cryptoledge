@@ -12,6 +12,12 @@
 		C82403B2208A38780038F281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82403B0208A38780038F281 /* Main.storyboard */; };
 		C82403B4208A38780038F281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82403B3208A38780038F281 /* Assets.xcassets */; };
 		C82403B7208A38780038F281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82403B5208A38780038F281 /* LaunchScreen.storyboard */; };
+		C8EC812420CC479E00743D43 /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC812220CC479E00743D43 /* MainViewTableViewCell.swift */; };
+		C8EC812520CC479E00743D43 /* MainViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EC812320CC479E00743D43 /* MainViewTableViewCell.xib */; };
+		C8EC812820CC53A900743D43 /* HelperFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC812720CC53A900743D43 /* HelperFile.swift */; };
+		C8EC812B20CC5ED000743D43 /* TradeViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC812920CC5ED000743D43 /* TradeViewTableViewCell.swift */; };
+		C8EC812C20CC5ED000743D43 /* TradeViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8EC812A20CC5ED000743D43 /* TradeViewTableViewCell.xib */; };
+		C8EC812F20CC6B6200743D43 /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC812E20CC6B6200743D43 /* TradeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		C82403B3208A38780038F281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82403B6208A38780038F281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82403B8208A38780038F281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8EC812220CC479E00743D43 /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		C8EC812320CC479E00743D43 /* MainViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewTableViewCell.xib; sourceTree = "<group>"; };
+		C8EC812720CC53A900743D43 /* HelperFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFile.swift; sourceTree = "<group>"; };
+		C8EC812920CC5ED000743D43 /* TradeViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewTableViewCell.swift; sourceTree = "<group>"; };
+		C8EC812A20CC5ED000743D43 /* TradeViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TradeViewTableViewCell.xib; sourceTree = "<group>"; };
+		C8EC812E20CC6B6200743D43 /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +69,33 @@
 				C82403AC208A38780038F281 /* AppDelegate.swift */,
 				C82403AE208A38780038F281 /* ViewController.swift */,
 				C82403B0208A38780038F281 /* Main.storyboard */,
+				C8EC812E20CC6B6200743D43 /* TradeViewController.swift */,
+				C8EC812D20CC5EDC00743D43 /* tradeCell */,
+				C8EC812720CC53A900743D43 /* HelperFile.swift */,
+				C8EC812620CC47AC00743D43 /* mainVC_Cell */,
 				C82403B3208A38780038F281 /* Assets.xcassets */,
 				C82403B5208A38780038F281 /* LaunchScreen.storyboard */,
 				C82403B8208A38780038F281 /* Info.plist */,
 			);
 			path = Cryoptoledge;
+			sourceTree = "<group>";
+		};
+		C8EC812620CC47AC00743D43 /* mainVC_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C8EC812220CC479E00743D43 /* MainViewTableViewCell.swift */,
+				C8EC812320CC479E00743D43 /* MainViewTableViewCell.xib */,
+			);
+			path = mainVC_Cell;
+			sourceTree = "<group>";
+		};
+		C8EC812D20CC5EDC00743D43 /* tradeCell */ = {
+			isa = PBXGroup;
+			children = (
+				C8EC812920CC5ED000743D43 /* TradeViewTableViewCell.swift */,
+				C8EC812A20CC5ED000743D43 /* TradeViewTableViewCell.xib */,
+			);
+			path = tradeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82403B7208A38780038F281 /* LaunchScreen.storyboard in Resources */,
+				C8EC812520CC479E00743D43 /* MainViewTableViewCell.xib in Resources */,
 				C82403B4208A38780038F281 /* Assets.xcassets in Resources */,
 				C82403B2208A38780038F281 /* Main.storyboard in Resources */,
+				C8EC812C20CC5ED000743D43 /* TradeViewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +174,10 @@
 			files = (
 				C82403AF208A38780038F281 /* ViewController.swift in Sources */,
 				C82403AD208A38780038F281 /* AppDelegate.swift in Sources */,
+				C8EC812B20CC5ED000743D43 /* TradeViewTableViewCell.swift in Sources */,
+				C8EC812F20CC6B6200743D43 /* TradeViewController.swift in Sources */,
+				C8EC812420CC479E00743D43 /* MainViewTableViewCell.swift in Sources */,
+				C8EC812820CC53A900743D43 /* HelperFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
