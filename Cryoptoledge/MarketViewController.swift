@@ -1,20 +1,21 @@
 //
-//  TradeViewController.swift
+//  MarketViewController.swift
 //  Cryoptoledge
 //
-//  Created by Syed  Rafay on 10/06/2018.
+//  Created by Syed  Rafay on 12/06/2018.
 //  Copyright © 2018 Syed  Rafay. All rights reserved.
 //
 
 import UIKit
 
-class TradeViewController: UIViewController, UITableViewDelegate {
+class MarketViewController: UIViewController,UITableViewDelegate {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-tableView.backgroundView?.backgroundColor = .clear
-        tableView.backgroundColor = .clear
+        tabView.backgroundView?.backgroundColor = .clear
+        tabView.backgroundColor = .clear
+
         // Do any additional setup after loading the view.
     }
 
@@ -23,7 +24,9 @@ tableView.backgroundView?.backgroundColor = .clear
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func backPressed(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -35,23 +38,25 @@ tableView.backgroundView?.backgroundColor = .clear
     */
 
 }
-extension TradeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 106
+
+extension MarketViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
+  
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tempCell = Bundle.main.loadNibNamed("TradeViewTableViewCell", owner: self, options: nil)?.first as! TradeViewTableViewCell
+        let tempCell = Bundle.main.loadNibNamed("MarketTableViewCell", owner: self, options: nil)?.first as! MarketTableViewCell
         return tempCell
     }
-   
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundView?.backgroundColor = .clear
         cell.backgroundColor = .clear
     }
-    
 }

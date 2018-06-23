@@ -13,7 +13,7 @@ class MainViewTableViewCell: UITableViewCell {
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var shortname: UILabel!
     @IBOutlet weak var value: UILabel!
-    @IBOutlet weak var Currencyimage: UIImageView!
+    @IBOutlet weak var updownImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

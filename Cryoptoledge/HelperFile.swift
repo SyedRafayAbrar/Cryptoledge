@@ -7,6 +7,7 @@
 //
 
 import Foundation
-
-var currency = [String:String]()
+var updown=[Double]()
+var currency = ["Name":"","Short":"","Price":""]
 var currencyList = [currency]
+
