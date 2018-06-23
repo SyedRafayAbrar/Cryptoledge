@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SlideMenuController
 
 class ViewController: UIViewController, UITableViewDelegate {
    
@@ -21,6 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func menuPressed(_ sender: Any) {
+self.slideMenuController?.showLeft()
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
