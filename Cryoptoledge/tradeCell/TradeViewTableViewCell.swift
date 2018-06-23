@@ -10,6 +10,10 @@ import UIKit
 
 class TradeViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var value: UILabel!
+    @IBOutlet weak var shortName: UILabel!
+    @IBOutlet weak var fullname: UILabel!
+    @IBOutlet weak var updownImage: UIImageView!
     @IBOutlet weak var tradeButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,6 +8,48 @@
 
 import Foundation
 var updown=[Double]()
-var currency = ["Name":"","Short":"","Price":""]
-var currencyList = [currency]
+class _currency{
+    private var _Name:String!
+    private var _Short:String!
+    private var _Price:String!
+    private var _upD:Double!
+  
+    var name:String {
+        set {
+            _Name = newValue
+        }
+        get {
+            return _Name!
+        }
+    }
+    
+    var short:String {
+        set {
+            _Short = newValue
+        }
+        get {
+            return _Short
+        }
+    }
+    var price:String {
+        set {
+            _Price = newValue
+        }
+        get {
+            return _Price
+        }
+    }
+   
+    var upD:Double {
+        set {
+            _upD = newValue
+        }
+        get {
+            return _upD
+        }
+    }
+    
+}
 
+var currencyList = [_currency]()
+var coinName:String=""

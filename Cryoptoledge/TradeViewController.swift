@@ -18,6 +18,9 @@ tableView.backgroundView?.backgroundColor = .clear
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func backPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,10 +44,20 @@ extension TradeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return currencyList.count-1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let tempCell = Bundle.main.loadNibNamed("TradeViewTableViewCell", owner: self, options: nil)?.first as! TradeViewTableViewCell
+        tempCell.fullname.text! = currencyList[indexPath.row].name
+        tempCell.shortName.text! = currencyList[indexPath.row].short
+        tempCell.value.text! = currencyList[indexPath.row].price
+        if currencyList[indexPath.row].upD > 0.0 {
+            tempCell.updownImage.image! = #imageLiteral(resourceName: "GreenArrow")
+        } else {
+            tempCell.updownImage.image! = #imageLiteral(resourceName: "RedArrow")
+            
+        }
         return tempCell
     }
    

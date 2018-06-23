@@ -17,7 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         tableView.backgroundView?.backgroundColor = .clear
         tableView.backgroundColor = .clear
-       Datafetch()
+        tableView.layer.borderWidth = 2
+tableView.layer.borderColor = UIColor.white.cgColor
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -26,7 +27,10 @@ self.slideMenuController?.showLeft()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        Datafetch()
 
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,17 +62,17 @@ extension ViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencyList.count-1
+        return currencyList.count-2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tempCell = Bundle.main.loadNibNamed("MainViewTableViewCell", owner: self, options: nil)?.first as! MainViewTableViewCell
-        tempCell.fullName.text! = currencyList[indexPath.row]["Name"]!
-        tempCell.shortname.text! = currencyList[indexPath.row]["Short"]!
-        tempCell.value.text! = currencyList[indexPath.row]["Price"]!
-            if updown[indexPath.row] > 0 {
-                tempCell.updownImage.image! = #imageLiteral(resourceName: "prizeboxBC")
+        tempCell.fullName.text! = currencyList[indexPath.row].name
+        tempCell.shortname.text! = currencyList[indexPath.row].short
+        tempCell.value.text! = currencyList[indexPath.row].price
+            if currencyList[indexPath.row].upD > 0.0000 {
+                tempCell.updownImage.image! = #imageLiteral(resourceName: "GreenArrow")
             } else {
-                tempCell.updownImage.image! = #imageLiteral(resourceName: "prizebox_Red")
+                tempCell.updownImage.image! = #imageLiteral(resourceName: "RedArrow")
 
             }
         
@@ -91,6 +95,18 @@ extension ViewController:UITableViewDataSource{
         let url = URL(string: "https://api.coinmarketcap.com/v2/ticker/")!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
+                let alert = UIAlertController(title: "Error", message: "No Internet Connection", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                let openSettings = UIAlertAction(title: "Open Setting", style: .default, handler: { (action: UIAlertAction) in
+                    if let url = URL(string:UIApplicationOpenSettingsURLString) {
+                        if UIApplication.shared.canOpenURL(url) {
+                            let url =  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    }
+                })
+                alert.addAction(ok)
+                alert.addAction(openSettings)
+                self.present(alert, animated: true, completion: nil)
                 print(error?.localizedDescription)
             } else {
                 if let urlContent = data {
@@ -100,25 +116,26 @@ extension ViewController:UITableViewDataSource{
                             if let JsonData = JsonContent["data"] as? [String:Any]{
                                 
                                 //loop Starts Here
-                                for i in 1...1000{
+                                for i in 1...2000{
+                                    var currency = _currency()
                                     if let JSONName = JsonData["\(i)"] as? [String:Any] {
                                         if let Name = JSONName["name"] as? String {
-                                            currency["Name"] = Name
+                                            currency.name = Name
                                         }
                                         if let Short = JSONName["symbol"] as? String {
-                                            currency["Short"] = Short
+                                            currency.short = Short
                                         }
                                         if let Price = JSONName["quotes"] as? [String:Any] {
                                             if let LatestPrice = Price["USD"] as? [String:Any]{
                                                 if let NowPrice = LatestPrice["price"] as? Double {
-                                                    currency["Price"] = "\(NowPrice / 1000.0)"
+                                                    currency.price = "\(NowPrice / 1000.0)"
                                                 }
                                                 if let up_Down = LatestPrice["percent_change_24h"] as? Double {
-                                                    updown.append(up_Down)
+                                                    currency.upD = up_Down
                                                 }
                                             }
                                         }
-                                        //                                        print(currency)
+                                        print(currency)
                                         currencyList.append(currency)
                                     }
                                     DispatchQueue.main.async {
@@ -130,6 +147,7 @@ extension ViewController:UITableViewDataSource{
                         }
                         
                     } catch {
+                    
                         print("Error Occured")
                     }
                 }
