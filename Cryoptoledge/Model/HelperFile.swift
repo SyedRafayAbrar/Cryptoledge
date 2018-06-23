@@ -50,6 +50,6 @@ class _currency{
     }
     
 }
-
+var exchangeName="USD"
 var currencyList = [_currency]()
 var coinName:String=""

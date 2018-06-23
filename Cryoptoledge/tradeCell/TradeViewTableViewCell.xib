@@ -57,12 +57,6 @@
                         <color key="textColor" red="1" green="0.98927304355461532" blue="0.99535551422237623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXf-n1-MgS">
-                        <rect key="frame" x="309" y="13" width="11" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="0.98927304360000001" blue="0.99535551420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXh-6Y-sGE">
                         <rect key="frame" x="16" y="25" width="99" height="30"/>
                         <constraints>
@@ -84,21 +78,19 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="cXf-n1-MgS" firstAttribute="centerY" secondItem="bMs-Bc-QXw" secondAttribute="centerY" id="1dV-hW-lXD"/>
                     <constraint firstItem="uXh-6Y-sGE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="5m0-U2-ivq"/>
                     <constraint firstAttribute="trailing" secondItem="lAG-CG-9rV" secondAttribute="trailing" constant="16" id="5tk-cb-GWd"/>
                     <constraint firstAttribute="trailing" secondItem="bMs-Bc-QXw" secondAttribute="trailing" constant="16" id="9le-aK-lAh"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="centerY" secondItem="bMs-Bc-QXw" secondAttribute="centerY" id="AOj-6c-vD3"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="CTr-eO-YgW"/>
-                    <constraint firstItem="bMs-Bc-QXw" firstAttribute="leading" secondItem="cXf-n1-MgS" secondAttribute="trailing" constant="8" id="I5B-E4-J4f"/>
                     <constraint firstItem="xMs-sI-tnM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="J1P-dl-IZb"/>
                     <constraint firstItem="xMs-sI-tnM" firstAttribute="top" secondItem="uXh-6Y-sGE" secondAttribute="bottom" constant="9" id="Q4z-3G-UyZ"/>
                     <constraint firstItem="uXh-6Y-sGE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="T7x-QQ-jNU"/>
                     <constraint firstAttribute="bottom" secondItem="lAG-CG-9rV" secondAttribute="bottom" constant="10.5" id="Vzg-zV-pac"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="leading" secondItem="1XH-s3-iaE" secondAttribute="trailing" constant="19" id="YJg-o9-khB"/>
+                    <constraint firstItem="bMs-Bc-QXw" firstAttribute="leading" secondItem="loO-nY-90S" secondAttribute="trailing" constant="22" id="cda-lf-3OB"/>
                     <constraint firstItem="1XH-s3-iaE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="i51-ZV-CHA"/>
                     <constraint firstItem="bMs-Bc-QXw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uOg-cq-Di9"/>
-                    <constraint firstItem="cXf-n1-MgS" firstAttribute="leading" secondItem="loO-nY-90S" secondAttribute="trailing" constant="3" id="vXv-CA-dMt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

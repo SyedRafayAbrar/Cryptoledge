@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var exchangeLabel: UILabel!
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var shortname: UILabel!
     @IBOutlet weak var value: UILabel!

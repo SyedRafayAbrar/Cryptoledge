@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80708B620DECC290019F085 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80708B520DECC290019F085 /* ConverterViewController.swift */; };
 		C82403AD208A38780038F281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82403AC208A38780038F281 /* AppDelegate.swift */; };
 		C82403AF208A38780038F281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82403AE208A38780038F281 /* ViewController.swift */; };
 		C82403B2208A38780038F281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82403B0208A38780038F281 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		5A5AD07709AA4A5BDAD3BD71 /* Pods_Cryoptoledge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryoptoledge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D6B3D4C54090756A406160 /* Pods-Cryoptoledge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryoptoledge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cryoptoledge/Pods-Cryoptoledge.release.xcconfig"; sourceTree = "<group>"; };
+		C80708B520DECC290019F085 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 		C82403A9208A38780038F281 /* Cryoptoledge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryoptoledge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82403AC208A38780038F281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C82403AE208A38780038F281 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C80708B720DECF8E0019F085 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8EC812720CC53A900743D43 /* HelperFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C82403A0208A38780038F281 = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +113,14 @@
 				C82403AC208A38780038F281 /* AppDelegate.swift */,
 				C82403AE208A38780038F281 /* ViewController.swift */,
 				C82403B0208A38780038F281 /* Main.storyboard */,
+				C80708B520DECC290019F085 /* ConverterViewController.swift */,
 				C843836320DE37C200FCD1C3 /* menuViewController.swift */,
 				C883F7A320CF09F6001B5D11 /* marketCell */,
 				C883F79D20CF0668001B5D11 /* graphViewController.swift */,
 				C883F79B20CF03F2001B5D11 /* MarketViewController.swift */,
 				C8EC812E20CC6B6200743D43 /* TradeViewController.swift */,
 				C8EC812D20CC5EDC00743D43 /* tradeCell */,
-				C8EC812720CC53A900743D43 /* HelperFile.swift */,
+				C80708B720DECF8E0019F085 /* Model */,
 				C8EC812620CC47AC00743D43 /* mainVC_Cell */,
 				C82403B3208A38780038F281 /* Assets.xcassets */,
 				C82403B5208A38780038F281 /* LaunchScreen.storyboard */,
@@ -269,6 +280,7 @@
 				C883F79E20CF0668001B5D11 /* graphViewController.swift in Sources */,
 				C8EC812820CC53A900743D43 /* HelperFile.swift in Sources */,
 				C883F79C20CF03F2001B5D11 /* MarketViewController.swift in Sources */,
+				C80708B620DECC290019F085 /* ConverterViewController.swift in Sources */,
 				C883F7A120CF09DA001B5D11 /* MarketTableViewCell.swift in Sources */,
 				C843836420DE37C200FCD1C3 /* menuViewController.swift in Sources */,
 			);

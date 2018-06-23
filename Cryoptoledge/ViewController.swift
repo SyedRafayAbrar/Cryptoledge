@@ -75,6 +75,7 @@ extension ViewController:UITableViewDataSource{
                 tempCell.updownImage.image! = #imageLiteral(resourceName: "RedArrow")
 
             }
+        tempCell.exchangeLabel.text = exchangeName
         
         return tempCell
         
@@ -92,8 +93,11 @@ extension ViewController:UITableViewDataSource{
     }
     
     func Datafetch() {
-        let url = URL(string: "https://api.coinmarketcap.com/v2/ticker/")!
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        
+            currencyList.removeAll()
+                let _url = URL(string: "https://api.coinmarketcap.com/v2/ticker/?convert=\(exchangeName)")!
+        
+        let task = URLSession.shared.dataTask(with: _url) { (data, response, error) in
             if error != nil {
                 let alert = UIAlertController(title: "Error", message: "No Internet Connection", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "ok", style: .cancel, handler: nil)
@@ -126,16 +130,20 @@ extension ViewController:UITableViewDataSource{
                                             currency.short = Short
                                         }
                                         if let Price = JSONName["quotes"] as? [String:Any] {
-                                            if let LatestPrice = Price["USD"] as? [String:Any]{
-                                                if let NowPrice = LatestPrice["price"] as? Double {
-                                                    currency.price = "\(NowPrice / 1000.0)"
+                                            
+                                                if let LatestPrice = Price[exchangeName] as? [String:Any]{
+                                                    if let NowPrice = LatestPrice["price"] as? Double {
+                                                        currency.price = "\(NowPrice)"
+                                                    }
+                                                    if let up_Down = LatestPrice["percent_change_24h"] as? Double {
+                                                        currency.upD = up_Down
+                                                    }
                                                 }
-                                                if let up_Down = LatestPrice["percent_change_24h"] as? Double {
-                                                    currency.upD = up_Down
-                                                }
-                                            }
+                                            
+                                            
+                                           
                                         }
-                                        print(currency)
+                                        
                                         currencyList.append(currency)
                                     }
                                     DispatchQueue.main.async {

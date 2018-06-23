@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Ic-zN-H8Y">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -68,6 +68,9 @@
                                 <state key="normal" title="Converter" backgroundImage="button">
                                     <color key="titleColor" red="1" green="0.89854220146162112" blue="0.00094988690645647633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4Ic-zN-H8Y" kind="show" id="KKG-0S-cEa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYd-pF-TLU">
                                 <rect key="frame" x="274" y="486" width="120" height="48"/>
@@ -403,6 +406,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgt-4G-kr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="802.17391304347836"/>
+        </scene>
+        <!--Converter View Controller-->
+        <scene sceneID="pe2-DS-vMO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Oh-iI-TYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="4Ic-zN-H8Y" customClass="ConverterViewController" customModule="Cryoptoledge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BQc-JF-2RX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdy-9c-EI9">
+                                <rect key="frame" x="0.0" y="270" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Ic-zN-H8Y" id="Ka5-QQ-LpE"/>
+                                    <outlet property="delegate" destination="4Ic-zN-H8Y" id="l9I-sJ-Da1"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zys-cg-eai">
+                                <rect key="frame" x="0.0" y="228" width="414" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="kuH-XO-sCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-QX-okb">
+                                <rect key="frame" x="129" y="494" width="156" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="sed-VU-C8F"/>
+                                    <constraint firstAttribute="height" constant="30" id="uiJ-5B-jUt"/>
+                                </constraints>
+                                <state key="normal" title="Done" backgroundImage="button">
+                                    <color key="titleColor" red="0.99276315664878723" green="1" blue="0.98907938701672915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="4Ic-zN-H8Y" eventType="touchUpInside" id="X8H-IM-QsK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qcp-QX-okb" firstAttribute="top" secondItem="rdy-9c-EI9" secondAttribute="bottom" constant="8" id="4JX-PX-zGq"/>
+                            <constraint firstItem="rdy-9c-EI9" firstAttribute="centerY" secondItem="PQA-eY-Ona" secondAttribute="centerY" id="9OD-E9-ybh"/>
+                            <constraint firstItem="Qcp-QX-okb" firstAttribute="centerX" secondItem="rdy-9c-EI9" secondAttribute="centerX" id="a2z-TI-nXG"/>
+                            <constraint firstItem="rdy-9c-EI9" firstAttribute="centerX" secondItem="PQA-eY-Ona" secondAttribute="centerX" id="amM-QN-5nU"/>
+                            <constraint firstItem="Zys-cg-eai" firstAttribute="centerX" secondItem="rdy-9c-EI9" secondAttribute="centerX" id="k3b-GS-YRB"/>
+                            <constraint firstItem="rdy-9c-EI9" firstAttribute="width" secondItem="BQc-JF-2RX" secondAttribute="width" id="qMb-ah-v4W"/>
+                            <constraint firstItem="rdy-9c-EI9" firstAttribute="top" secondItem="Zys-cg-eai" secondAttribute="bottom" constant="8" id="uBH-UA-Bd7"/>
+                            <constraint firstItem="Zys-cg-eai" firstAttribute="width" secondItem="BQc-JF-2RX" secondAttribute="width" id="xkf-A3-Hrp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQA-eY-Ona"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="rdy-9c-EI9" id="OPa-xX-ijY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1634.7826086956522" y="809.51086956521749"/>
         </scene>
         <!--Market View Controller-->
         <scene sceneID="xLH-Cp-I8S">
