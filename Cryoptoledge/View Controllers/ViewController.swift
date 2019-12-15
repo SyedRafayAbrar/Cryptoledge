@@ -28,7 +28,10 @@ self.slideMenuController?.showLeft()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        Datafetch()
+        DispatchQueue.global(qos: .background).async {
+                self.Datafetch()
+        }
+        
 
     }
     override func didReceiveMemoryWarning() {
@@ -62,7 +65,7 @@ extension ViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencyList.count-2
+        return currencyList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tempCell = Bundle.main.loadNibNamed("MainViewTableViewCell", owner: self, options: nil)?.first as! MainViewTableViewCell

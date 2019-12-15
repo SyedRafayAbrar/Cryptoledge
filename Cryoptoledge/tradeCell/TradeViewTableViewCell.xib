@@ -28,18 +28,6 @@
                         <color key="textColor" red="0.99422629112376093" green="1" blue="0.65093414518377979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAG-CG-9rV">
-                        <rect key="frame" x="251" y="64" width="101" height="31"/>
-                        <color key="backgroundColor" red="1" green="0.99825223721907663" blue="0.57339727492806647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="31" id="D9z-tw-WkU"/>
-                            <constraint firstAttribute="width" constant="101" id="NFp-hL-z2G"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                        <state key="normal" title="Trade Rate">
-                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedArrow" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-Bc-QXw">
                         <rect key="frame" x="328" y="8" width="24" height="30"/>
                         <constraints>
@@ -76,28 +64,39 @@
                         <color key="textColor" red="0.9919971479442995" green="1" blue="0.99004060345769651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trade Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suZ-lO-d87">
+                        <rect key="frame" x="248" y="74" width="104" height="21"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.012707368827160493" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="cdn-jQ-Pu5"/>
+                            <constraint firstAttribute="width" constant="104" id="iiO-Y5-bfz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="uXh-6Y-sGE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="5m0-U2-ivq"/>
-                    <constraint firstAttribute="trailing" secondItem="lAG-CG-9rV" secondAttribute="trailing" constant="16" id="5tk-cb-GWd"/>
                     <constraint firstAttribute="trailing" secondItem="bMs-Bc-QXw" secondAttribute="trailing" constant="16" id="9le-aK-lAh"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="centerY" secondItem="bMs-Bc-QXw" secondAttribute="centerY" id="AOj-6c-vD3"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="CTr-eO-YgW"/>
                     <constraint firstItem="xMs-sI-tnM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="J1P-dl-IZb"/>
                     <constraint firstItem="xMs-sI-tnM" firstAttribute="top" secondItem="uXh-6Y-sGE" secondAttribute="bottom" constant="9" id="Q4z-3G-UyZ"/>
                     <constraint firstItem="uXh-6Y-sGE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="T7x-QQ-jNU"/>
-                    <constraint firstAttribute="bottom" secondItem="lAG-CG-9rV" secondAttribute="bottom" constant="10.5" id="Vzg-zV-pac"/>
                     <constraint firstItem="loO-nY-90S" firstAttribute="leading" secondItem="1XH-s3-iaE" secondAttribute="trailing" constant="19" id="YJg-o9-khB"/>
                     <constraint firstItem="bMs-Bc-QXw" firstAttribute="leading" secondItem="loO-nY-90S" secondAttribute="trailing" constant="22" id="cda-lf-3OB"/>
                     <constraint firstItem="1XH-s3-iaE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="i51-ZV-CHA"/>
+                    <constraint firstAttribute="trailing" secondItem="suZ-lO-d87" secondAttribute="trailing" constant="16" id="r4F-br-T9T"/>
                     <constraint firstItem="bMs-Bc-QXw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uOg-cq-Di9"/>
+                    <constraint firstAttribute="bottom" secondItem="suZ-lO-d87" secondAttribute="bottom" constant="10.5" id="zBh-Ca-3py"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="fullname" destination="xMs-sI-tnM" id="hqn-5P-Mcq"/>
                 <outlet property="shortName" destination="uXh-6Y-sGE" id="hbJ-c0-i8J"/>
-                <outlet property="tradeButton" destination="lAG-CG-9rV" id="lr2-BJ-pxI"/>
+                <outlet property="tradeButton" destination="suZ-lO-d87" id="SiL-oD-hrP"/>
                 <outlet property="updownImage" destination="bMs-Bc-QXw" id="YWc-we-U40"/>
                 <outlet property="value" destination="loO-nY-90S" id="Jg4-23-QsX"/>
             </connections>

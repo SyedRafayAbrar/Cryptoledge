@@ -14,7 +14,7 @@ class TradeViewTableViewCell: UITableViewCell {
     @IBOutlet weak var shortName: UILabel!
     @IBOutlet weak var fullname: UILabel!
     @IBOutlet weak var updownImage: UIImageView!
-    @IBOutlet weak var tradeButton: UIButton!
+    @IBOutlet weak var tradeButton: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         tradeButton.layer.cornerRadius = 6

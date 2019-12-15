@@ -7,5 +7,7 @@ target 'Cryoptoledge' do
 
   # Pods for Cryoptoledge
 pod 'SlideMenuController'
+pod 'Moya', '~> 12.0'
+pod 'SwiftyJSON'
 
 end
