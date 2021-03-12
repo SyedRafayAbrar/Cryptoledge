@@ -5,7 +5,10 @@ version: 2.1
 
 jobs:
   build:
-
+    ios:
+      environment:
+            SCAN_DEVICE: iPhone 8
+            SCAN_SCHEME: Cryoptoledge
     macos:
       xcode: 11.0.0 # Specify the Xcode version to use
 
